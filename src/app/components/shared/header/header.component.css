@@ -1,0 +1,14 @@
+.image-fit {
+  height: 51px;
+}
+
+@media (max-width: 986px) {
+  .image-fit {
+    height: 47px !important;
+    width: 68px !important;
+  }
+
+  .link-image {
+    margin-left: 39px;
+  }
+}

@@ -1,0 +1,22 @@
+<section class="browse-cat bg-theme-primary">
+  <div class="container-fluid custom-container">
+    <div class="row">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12 " *ngFor="let team of teamblock">
+          <a class="categories d-lg-flex d-md-flex">
+            <div class="icon3 text-custom-white bg-light-green ">
+              <img [src]="team.pic" class="rounded-circle" [alt]="team.pic">
+            </div>
+            <div class="text-left ml-3 mb-4">
+              <span class="text-light-black cat-name"><strong>{{team.rules}}</strong></span>
+              <span class="text-light-black cat-name"><i class="fas fa-user mr-1"></i>{{team.fullName}}</span>
+              <span class="text-light-black cat-name"><i class="fas fa-envelope mr-1"></i>{{team.email}}</span>
+              <span *ngIf="!!team.phone" class="text-light-black cat-name"><i class="fas fa-phone-alt mr-1"></i>{{team.phone}}</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

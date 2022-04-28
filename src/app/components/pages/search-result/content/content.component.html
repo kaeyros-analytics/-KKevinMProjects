@@ -1,0 +1,58 @@
+<section class="our-articles bg-light-theme section-padding">
+  <div class="container-fluid custom-container">
+    <div class="row">
+      <aside class="col-xl-3 col-lg-4">
+        <app-donation-sidebar></app-donation-sidebar>
+      </aside>
+
+      <div class="col-xl-9 col-lg-8" *ngIf="actuality; else emptyValue">
+        <div class="main-box padding-20 full-width sa-causes-single sa-causes-single-2 mb-md-40">
+          <div class="post-wrapper mb-xl-20">
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <div class="profile-img full-height">
+                  <img style="object-fit: cover" [src]="actuality.image" [alt]="actuality.name"
+                       class="img-fluid full-width full-height">
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="profile-content">
+                  <h4>{{actuality.title}}</h4>
+                  <p>{{actuality.name}}</p>
+                  <p>{{actuality.raised}}</p>
+                  <p><strong>About:</strong><br> {{actuality.shortdesc}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-12">
+              <!--                            <div [innerHtml]="actuality.htmldesc"></div>-->
+              <div class="user-gallery">
+                <div class="row">
+                  <div class="col-md-4" *ngFor="let image of actuality.gallery">
+                    <a href="{{image}}" class="popup-image">
+                      <img [src]="image" class="img-fluid rounded mx-auto d-block full-width">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ng-template #emptyValue>
+        <div  class="col-xl-9 col-lg-8">
+
+          <div class="main-box padding-20 full-width sa-causes-single sa-causes-single-2 mb-md-40">
+            this actuality is not exist
+
+          </div>
+
+        </div>
+
+      </ng-template>
+    </div>
+  </div>
+</section>

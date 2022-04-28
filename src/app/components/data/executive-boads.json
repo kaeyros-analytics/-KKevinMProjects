@@ -1,0 +1,50 @@
+[
+  {
+    "pic": "/assets/img/user.png",
+    "rules": "Vorstandsvorsitzender",
+    "fullName": "Lionel Tambe Eyong Nkongho",
+    "email": "leyong@kahef.de",
+    "phone": "+49 1590 – 1496003"
+
+  },
+  {
+    "pic": "/assets/img/user.png",
+    "rules": "Stellvertretender vorsitzender",
+    "fullName": "Karlmax Boma",
+    "email": "kboma@kahef.de",
+    "phone": "+49 176 84162510"
+
+  },
+  {
+    "pic": "/assets/img/user.png",
+    "rules": "Generalsekretär",
+    "fullName": "Ndeme Nguba Matuke",
+    "email": "nnmatuke@kahef.de",
+    "phone": ""
+
+  },
+  {
+    "pic": "/assets/img/user.png",
+    "rules": "Schatzmeister",
+    "fullName": "Peter KAH",
+    "email": "Pkah@kahef.de",
+    "phone": "+49 176 – 72553557"
+
+  },
+  {
+    "pic": "/assets/img/user.png",
+    "rules": "Finanzsekretär",
+    "fullName": "Celestine Njumbe",
+    "email": "cnjumbe@kahef.de",
+    "phone": "+49 152 54122439"
+
+  },
+  {
+    "pic": "/assets/img/user.png",
+    "rules": "Sozialer Koordinator",
+    "fullName": "Javis Kome Ediage",
+    "email": "mbue@kahef.de",
+    "phone": ""
+
+  }
+]

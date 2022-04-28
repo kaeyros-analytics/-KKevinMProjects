@@ -1,0 +1,32 @@
+[
+  {
+    "id":1,
+    "image": "assets/img/banner/banner-kahef-1.jpg",
+    "title": "Unsere Aufgaben",
+    "subtitle": " ",
+    "text": "Grauer Aal-Wels Langnasen-Peitschenschwanz-Wels Kleinaugen-Quadratschwanz-Königin Danio Einhornfisch Kurznasen-Grünauge Füsilierfisch Silberkarpfen Knabberer Haisauger Schleie Lookdown-Wels",
+    "position":"col-lg-8",
+    "extraclass": "right-side-content text-center",
+    "routerLink": "/about"
+  },
+  {
+    "id":2,
+    "image": "assets/img/banner/banner-kahef-2.jpg",
+    "title": "Unsere Projekte",
+    "subtitle": " ",
+    "text": "Grauer Aal-Wels Langnasen-Peitschenschwanz-Wels Kleinaugen-Quadratschwanz-Königin Danio Einhornfisch Kurznasen-Grünaugen-Füsilierfisch Silberkarpfen Knabberer Haisauger Schleie Lookdown-Wels",
+    "position":"col-lg-8",
+    "extraclass": "right-side-content text-center",
+    "routerLink": "/project"
+  },
+  {
+    "id":3,
+    "image": "assets/img/banner/banner-kahef.jpg",
+    "title": "Unterstützen Sie uns!",
+    "subtitle": " ",
+    "text": "Grauer Aal-Wels Langnasen-Peitschenschwanz-Wels Kleinaugen-Quadratschwanz-Königin Danio Einhornfisch Kurznasen-Grünaugen-Füsilierfisch Silberkarpfen Knabberer Haisauger-Schleie Lookdown-Welsf",
+    "position":"col-lg-8",
+    "extraclass": "right-side-content text-center",
+    "routerLink": "/become-a-member"
+  }
+]

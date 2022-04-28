@@ -1,0 +1,14 @@
+.nav-item{
+  width: 35%;
+  text-align: center;
+  font-weight: bold;
+
+}
+.nav{
+  justify-content: space-around;
+  margin-top: -55px;
+}
+
+.nav-link.active{
+  background-color: #4c283c;
+}

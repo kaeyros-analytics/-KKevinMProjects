@@ -1,0 +1,24 @@
+<div class="side-bar">
+  <app-search (search)="searchOutput($event)"></app-search>
+  <div class="main-box padding-20 side-blog mb-xl-20 mt-10">
+    <h5 class="text-light-black">Aktuelles</h5>
+    <article class="side-post pb-xl-20 mb-xl-20 u-line" *ngFor="let item of actual">
+      <div class="thumb-img">
+        <a routerLink="/project/{{item.id}}"><img [src]="item.image" [alt]="item.title">
+        </a>
+      </div>
+      <div class="content-wrap">
+        <div class="entry-meta-content">
+          <h6 class="entry-title">
+            <a routerLink="/project/{{item.id}}"  class="text-light-black">{{item.title}}</a>
+          </h6>
+          <div class="entry-tye"><span class="text-light-white fw-400"></span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div >
+    <img src="/assets/img/left-image-bar.jpg" class="img-fluid full-width" alt="about us images">
+  </div>
+</div>

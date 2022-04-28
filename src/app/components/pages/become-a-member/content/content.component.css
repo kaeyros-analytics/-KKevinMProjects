@@ -1,0 +1,12 @@
+input[type=radio] {
+  z-index: 3;
+}
+label {
+  font-weight: normal;
+  cursor: pointer;
+}
+.radio label > span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 2px;
+}

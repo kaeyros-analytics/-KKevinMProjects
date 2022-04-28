@@ -1,0 +1,23 @@
+<section class="recent-order section-padding">
+  <div class="container-fluid custom-container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-header-left title">
+          <h3 class="text-light-black header-title">Partner</h3>
+          <!--                    <span class="fs-16"><a routerLink="/shop-left">See All Bestseller</a></span>-->
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" *ngFor="let item of partners ">
+        <div class="product-box mb-md-20">
+          <div class="product-img">
+            <a>
+              <img [src]="item" class="img-fluid full-width" [alt]="item">
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Modal -->

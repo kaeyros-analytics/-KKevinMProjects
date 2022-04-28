@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "linkText": "Startseite",
+    "link": "/",
+    "child": false,
+    "submenu": [ ]
+  },
+  {
+    "id": 2,
+    "linkText": "Der Verein",
+    "child": true,
+    "submenu": [
+      {
+        "id": 2.2,
+        "link": "/about",
+        "linkText": "Über uns"
+      },
+      {
+        "id": 2.3,
+        "link": "/board-of-directors",
+        "linkText": "Vorstand"
+      },
+      {
+        "id": 2.4,
+        "link": "/law",
+        "linkText": "Satzung"
+      },
+      {
+        "id": 2.6,
+        "link": "/become-a-member",
+        "linkText": "Mitglied werden"
+      },
+      {
+        "id": 2.7,
+        "link": "/become-a-volunteer",
+        "linkText": "Freiwilliger werden"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "linkText": "Projekte",
+    "link": "/project",
+    "child": true,
+    "submenu": [
+      {
+        "id": 3.1,
+        "linkText": "lokal",
+        "link": "/project"
+      },
+      {
+        "id": 3.2,
+        "link": "/project",
+        "linkText": "International"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "linkText": "Spenden",
+    "link":"/donate",
+    "child": false,
+    "submenu": []
+  },
+  {
+    "id": 5,
+    "linkText": "Kontakt",
+    "link":"/contact",
+    "child": false,
+    "submenu": [ ]
+  },
+  {
+    "id": 6,
+    "linkText": "Impressum",
+    "link":"/imprint",
+    "child": false,
+    "submenu": [ ]
+  }
+]

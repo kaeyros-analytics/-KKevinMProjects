@@ -1,0 +1,31 @@
+[
+  {
+    "id":1,
+    "icon": "assets/img/help.svg",
+    "title": "Teilnehmen",
+    "text": "Als Freiwilliger",
+    "extclass": "border-custom-right border-sm-bottom"
+  },
+  {
+    "id":2,
+    "icon": "assets/img/money.svg",
+    "title": "Sei eine Hand",
+    "text": "Als Spender",
+    "extclass": "border-custom-right border-sm-bottom"
+  },
+  {
+    "id":3,
+    "icon": "assets/img/investor.svg",
+    "title": "Beteiligen Sie sich",
+    "text": "Als Sponsor",
+    "extclass": "border-custom-right border-sm-bottom"
+  },
+  {
+    "id":4,
+    "icon": "assets/img/cash.svg",
+    "title": "Sei ein Teil",
+    "text": "Bei unserer Spendenaktion",
+    "extclass":""
+  }
+]
+
