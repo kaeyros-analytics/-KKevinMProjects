@@ -1,6 +1,9 @@
 import {Injectable, AfterContentInit, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import storyblock from '../data/story/story.json';
+import laufendeblock from '../data/story/laufende.json';
+import internation from '../data/story/internation.json';
+import internationLaufente from '../data/story/internation-laufente.json';
 import authors from '../data/authors.json';
 import tags from '../data/story/tags.json';
 import {Actuality} from '../models/actuality';
@@ -12,6 +15,9 @@ export class StoryHelperService implements AfterContentInit, OnInit {
   // pagination
   page: number = 1;
   public storyblock = storyblock;
+  public laufendeProjekte = laufendeblock;
+  public internation = internation;
+  public internationLaufente = internationLaufente;
   public storytags = tags;
   public tags = tags;
   public storydetails: Actuality[] = storyblock;

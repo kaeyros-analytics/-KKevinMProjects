@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {StoryHelperService} from 'src/app/components/services/story-helper.service';
 import storyblock from '../../../data/story/story.json';
 
@@ -8,6 +8,9 @@ import storyblock from '../../../data/story/story.json';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent extends StoryHelperService {
+
+  @Input() type =  '';
+  isInternational = false;
 
   years = [
     {
@@ -34,13 +37,19 @@ export class ContentComponent extends StoryHelperService {
     }
   ];
 
-  // tslint:disable-next-line:typedef
-  filterByYear(year: any) {
+  filterByYear(year: any): void {
     if (year === 'all') {
       this.storyblock =  storyblock;
     } else {
       this.filterProject(year);
     }
 
+  }
+
+  ngOnInit(): void {
+    super.ngOnInit();
+    if (this.type === 'international') {
+      this.isInternational = true;
+    }
   }
 }

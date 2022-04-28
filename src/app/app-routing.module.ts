@@ -190,7 +190,7 @@ const routes: Routes = [
     data: {breadcrumb: 'Projekte'}
   },
 
-  
+
   // Imprint
   {
     path: 'imprint',
@@ -223,7 +223,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

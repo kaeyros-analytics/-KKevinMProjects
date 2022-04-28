@@ -63,7 +63,7 @@
     "image": "assets/img/projects/project-2.jpg",
     "name": " ",
     "address": "CA",
-    "title": "Schifffahrt Dortmund-Ems-Kanal",
+    "title": "Schifffahrt Dortmund-Ems-Kanal 2018",
     "shortdesc": "",
     "tags": [
       3,
@@ -167,7 +167,12 @@
         ]
       }
     ],
-    "gallery": []
+    "gallery": [
+      "assets/img/projects/coming-soon.jpg",
+      "assets/img/projects/coming-soon.jpg",
+      "assets/img/projects/coming-soon.jpg",
+      "assets/img/projects/coming-soon.jpg"
+    ]
   },
   {
     "id": 4,

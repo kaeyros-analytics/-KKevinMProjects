@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, ActivatedRouteSnapshot} from '@angular/router';
 
 @Component({
   selector: 'app-story-grid',
@@ -8,14 +8,19 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class StoryGridComponent implements OnInit {
   private id: any;
+  data: any;
 
-  constructor(private route: ActivatedRoute) {
-  }
+  constructor(private route: ActivatedRoute) {}
 
-  // tslint:disable-next-line:typedef
-  ngOnInit() {
+  ngOnInit(): void{
     this.route.queryParams.subscribe(params => {
       this.id = params.id;
     });
+
+    if (this.route.data) {
+      this.route.data.subscribe(values => {
+        this.data = values;
+      });
+    }
   }
 }
