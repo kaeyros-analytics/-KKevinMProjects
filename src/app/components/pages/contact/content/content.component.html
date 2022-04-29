@@ -11,18 +11,18 @@
               <div class="form-group">
                 <input type="text" class="form-control form-control-submit" name="name" formControlName="name"
                        [(ngModel)]="model.name" placeholder="Dein Name (Pflichtfeld)" required>
-                <span style="color: red" *ngIf="contactForm.controls.name.errors && contactForm.controls.name.hasError('required')">*</span>
+                <span style="color: red" *ngIf="contactForm.controls.name.errors && contactForm.controls.name.hasError('required')"></span>
               </div>
               <div class="form-group">
                 <input type="email" name="email" [(ngModel)]="model.email" formControlName="email" class="form-control form-control-submit"
                        placeholder="Deine E-Mail-Adresse (Pflichtfeld)" required>
-                <span style="color: red" *ngIf="contactForm.controls.email.errors && contactForm.controls.email.hasError('required')">*</span>
+                <span style="color: red" *ngIf="contactForm.controls.email.errors && contactForm.controls.email.hasError('required')"></span>
               </div>
               <div class="form-group">
                 <input type="text" name="subject" formControlName="subject"
                        [(ngModel)]="model.subject" class="form-control form-control-submit"
                        placeholder="Betreff" required>
-                <span style="color: red" *ngIf="contactForm.controls.subject.errors && contactForm.controls.subject.hasError('required')">*</span>
+                <span style="color: red" *ngIf="contactForm.controls.subject.errors && contactForm.controls.subject.hasError('required')"></span>
               </div>
               <div class="form-group">
                 <input type="text" name="phone" formControlName="phone"
@@ -35,7 +35,7 @@
                                 <textarea name="message"
                                           [(ngModel)]="model.message" class="form-control form-control-submit" formControlName="message"
                                           placeholder="Deine Nachricht" required [style.height.px]="225"></textarea>
-                <span style="color: red" *ngIf="contactForm.controls.message.errors && contactForm.controls.message.hasError('required')">*</span>
+                <span style="color: red" *ngIf="contactForm.controls.message.errors && contactForm.controls.message.hasError('required')"></span>
 
               </div>
             </div>

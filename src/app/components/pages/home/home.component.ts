@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ShopService} from '../../services/shop.service';
+import storyblock from '../../data/story/story.json';
+
+
 
 @Component({
   selector: 'app-home',

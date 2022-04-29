@@ -23,8 +23,8 @@ export class BannerComponent implements OnInit {
     spaceBetween: 0,
     loop: true,
     navigation: {
-      nextEl: '.about-button-next',
-      prevEl: '.about-button-prev'
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
     }
 
   };
