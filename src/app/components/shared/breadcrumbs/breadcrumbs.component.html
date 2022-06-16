@@ -10,8 +10,7 @@
                         <li *ngIf="!route.terminal" class="breadcrumb-item">
                             <a href="" [routerLink]="[route.url]">{{ route.displayName }}</a>
                         </li>
-                        <li *ngIf="route.terminal" class="breadcrumb-item active" aria-current="page">{{
-                            route.displayName }}</li>
+                        <li *ngIf="route.terminal" class="breadcrumb-item active" aria-current="page">{{ route.displayName }}</li>
                     </ul>
                 </ng-template>
             </div>

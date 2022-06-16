@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     window.scroll(0,0);
   }
   private createTitle(routesCollection: Breadcrumb[]) {
-    const title = 'kahef - Charity & Shop - Angular Template';
+    const title = 'Kahef e.V.';
     const titles = routesCollection.filter((route) => route.displayName);
 
     if (!titles.length) { return title; }

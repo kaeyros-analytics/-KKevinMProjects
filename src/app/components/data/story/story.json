@@ -4,7 +4,7 @@
     "image": "/assets/img/projects/project-1.jpg",
     "name": " ",
     "address": "NY",
-    "title": "Vatertag 2018",
+    "title": "Vatertag 2019",
     "shortdesc": "",
     "tags": [
       1,
@@ -118,10 +118,10 @@
   },
   {
     "id": 3,
-    "image": "assets/img/projects/project-3.jpg",
+    "image": "assets/img/projects/coming-soon.jpg",
     "name": " ",
     "address": "LA",
-    "title": "Vatertag 2019",
+    "title": "Coming soon",
     "shortdesc": "",
     "tags": [
       5,

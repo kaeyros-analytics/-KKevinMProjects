@@ -41,18 +41,18 @@
   {
     "id": 3,
     "linkText": "Projekte",
-    "link": "/project",
+   
     "child": true,
     "submenu": [
       {
         "id": 3.1,
-        "linkText": "lokal",
+        "linkText": "Lokal",
         "link": "/project"
       },
       {
         "id": 3.2,
-        "link": "/project/international",
-        "linkText": "International"
+        "linkText": "International",
+        "link": "/project/international"
       }
     ]
   },

@@ -29,7 +29,7 @@ const routes: Routes = [
   {
     path: 'about',
     loadChildren: () => import('./components/pages/about/about.module').then(m => m.AboutModule),
-    data: {breadcrumb: 'Uber uns'}
+    data: {breadcrumb: 'Über uns'}
   },
   // spenden
   {
