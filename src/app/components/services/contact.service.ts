@@ -9,7 +9,8 @@ import { Contact } from '../models/contact';
 })
 export class ContactService {
 
-  ServerUrl = 'https://slidesigma.nyc/scripts/sendmail.php';
+  //ServerUrl = 'https://slidesigma.nyc/scripts/sendmail.php';
+  ServerUrl = 'http://localhost:8082/smtp/send';
   errorData: {} | undefined;
 
   httpOptions = {
