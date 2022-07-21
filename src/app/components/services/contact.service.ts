@@ -9,7 +9,8 @@ import { Contact } from '../models/contact';
 })
 export class ContactService {
 
-  ServerUrl = 'https://slidesigma.nyc/scripts/sendmail.php';
+  //ServerUrl = 'https://slidesigma.nyc/scripts/sendmail.php';
+  ServerUrl = 'http://localhost:8082/smtp/send';
   errorData: {} | undefined;
 
   httpOptions = {
@@ -19,6 +20,7 @@ export class ContactService {
   constructor( private http: HttpClient ) { }
 
   contactForm(formdata: Contact) {
+    console.log('testttttttttt thhhhhhhhhhhhhhh');
     return this.http.post<Contact>(this.ServerUrl, formdata, this.httpOptions).pipe(
       catchError(this.handleError)
     );

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ContactService } from '../../../services/contact.service';
 import { Contact } from '../../../models/contact';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import { HttpService } from 'src/app/services/http.service';
 
 @Component({
   selector: 'app-content',
@@ -15,15 +16,17 @@ export class ContentComponent implements OnInit {
   model = new Contact;
   submitted = false;
   error: {} | undefined;
-  constructor( private contactService: ContactService, private formBuilder: FormBuilder) { }
+  constructor( private contactService: ContactService, private formBuilder: FormBuilder, private httpService: HttpService) { }
 
   onSubmit() {
+    console.log('testtest');
     this.submitted = true;
     return this.contactService.contactForm(this.model).subscribe(
       data => this.model = data,
       error => this.error = error
     );
   }
+
 
   ngOnInit(): void {
   }
@@ -41,5 +44,7 @@ export class ContentComponent implements OnInit {
       message   : [null, [Validators.required]],
     });
   }
+
+  
 
 }
