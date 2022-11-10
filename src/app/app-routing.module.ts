@@ -204,6 +204,11 @@ const routes: Routes = [
     data: {breadcrumb: 'Projekte'}
   },
   {
+    path: 'project/international',
+    loadChildren: () => import('./components/pages/pro-inter/pro-inter.module').then(m => m.ProInterModule),
+    data: {breadcrumb: 'Projekte'}
+  },
+  {
     path: 'search-result/:value',
     loadChildren: () => import('./components/pages/search-result/search-result.module').then(m => m.SearchResultModule),
     data: {breadcrumb: ''}

@@ -15,11 +15,11 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
   ]
 })
 export class AppComponent implements OnInit {
-  constructor(private titleService: Title, private breadcrumbService: BreadcrumbService) {
+  constructor(private titleService: Title, private BreadcrumbService: BreadcrumbService) {
   }
 
   ngOnInit(): void {
-    this.breadcrumbService.breadcrumbChanged.subscribe(crumbs => {
+    this.BreadcrumbService.breadcrumbChanged.subscribe(crumbs => {
       this.titleService.setTitle(this.createTitle(crumbs));
     });
   }

@@ -1,4 +1,4 @@
-<breadcrumb #parent>
+<!-- <breadcrumb #parent>
     <div class="breadcrumb-area" [style.background-image]="'url(assets/img/innerbanner.jpg)'">
         <div class="overlay overlay-bg"></div>
         <div class="container">
@@ -17,3 +17,24 @@
         </div>
     </div>
 </breadcrumb>
+ -->
+
+ <breadcrumb #parent>
+    <div class="breadcrumb-area" [style.background-image]="'url(assets/img/innerbanner.jpg)'">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="breadcrumb-content">
+                <ng-template ngFor let-route [ngForOf]="parent.breadcrumbs">
+                    <h2>{{ route.displayName }}</h2>
+                    <ul>
+                        <li><a routerLink="/">Startseite</a></li>
+                        <li *ngIf="!route.terminal" class="breadcrumb-item">
+                            <a href="" [routerLink]="[route.url]">{{ route.displayName }}</a>
+                        </li>
+                        <li *ngIf="route.terminal" class="breadcrumb-item active" aria-current="page">{{ route.displayName }}</li>
+                    </ul>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+ </breadcrumb>

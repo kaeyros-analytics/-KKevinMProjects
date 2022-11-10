@@ -105,7 +105,7 @@ label {
 	opacity: 0.8;
 }
 .overlay-bg-dark {
-	background: #000000;
+	/* background: #000000; */
 	opacity: 0.5;
 	z-index: 2;
 }

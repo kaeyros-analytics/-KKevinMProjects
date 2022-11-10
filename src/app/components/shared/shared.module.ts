@@ -11,7 +11,7 @@ import { CountdownModule } from "ng2-countdown-timer";
 
 import { AdvertisementComponent } from './advertisement/advertisement.component';
 import { BlogSidebarComponent } from './blog-sidebar/blog-sidebar.component';
-import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+import { breadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { DonationSidebarComponent } from './donation-sidebar/donation-sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
@@ -31,7 +31,7 @@ import { SearchComponent } from './search/search.component';
     AdvertisementComponent,
     SearchComponent,
     BlogSidebarComponent,
-    BreadcrumbsComponent,
+    breadcrumbsComponent,
     DonationSidebarComponent,
     FooterComponent,
     HeaderComponent,
@@ -57,7 +57,7 @@ import { SearchComponent } from './search/search.component';
   exports: [
     AdvertisementComponent,
     BlogSidebarComponent,
-    BreadcrumbsComponent,
+    breadcrumbsComponent,
     DonationSidebarComponent,
     FooterComponent,
     HeaderComponent,
