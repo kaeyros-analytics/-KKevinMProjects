@@ -101,5 +101,107 @@
     </div>
   </section>
 </ng-container>
+<ng-container *ngIf="isInternational">
+  <section class="our-articles bg-light-theme section-padding ">
+    <div class="container-fluid custom-container">
+      <div class="row">
+        <div class="col-xl-12">
+          <ul ngbNav #nav="ngbNav" class="nav nav-pills mb-3">
+            <li ngbNavItem>
+              <a ngbNavLink>Laufende Projekte </a>
+              <ng-template ngbNavContent>
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="main-box padding-20 trending-blog-cat mb-xl-20">
+                      <h5 class="text-light-black">Nach Jahr filtern</h5>
+                      <ul>
+                        <li *ngFor="let item of years"
+                            class="pb-xl-20 u-line mb-xl-20 text-center"
+                            style="cursor: pointer"
+                            (click)="filterByYear(item.year)">
+                          <a class="text-light-black fw-600 "><strong>{{item.year}}</strong></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-9">
+                    <div class=" full-width">
+                      <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6"
+                             *ngFor="let item of internationLaufente | paginate: { itemsPerPage: 8, currentPage: page }">
+                          <div class="sa-causes-single sa-causes-single-2">
+                            <div class="entry-thumb">
+                              <img [src]="item.image" [alt]="item.name" class="img-fluid full-width">
+                              <!-- <div class="dontaion-category story-meta">
+                                <p><strong>{{item.name}}</strong></p>
+                                <p><strong>{{item.raised }}</strong></p>
+                              </div> -->
+                            </div>
+                            <div class="causes-details-wrap">
+                              <div class="causes-details">
+                                <h5><a routerLink="/project/{{item.id}}">{{item.title}}</a></h5>
+                                <p>{{item.shortdesc | slice:0:100}}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </li>
+            <li ngbNavItem>
+              <a ngbNavLink>Abgeschlossene Projekte</a>
+              <ng-template ngbNavContent>
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="main-box padding-20 trending-blog-cat mb-xl-20">
+                      <h5 class="text-light-black">Nach Jahr filtern</h5>
+                      <ul>
+                        <li *ngFor="let item of years"
+                            class="pb-xl-20 u-line mb-xl-20 text-center"
+                            style="cursor: pointer"
+                            (click)="filterByYear(item.year)">
+                          <a class="text-light-black fw-600 "><strong>{{item.year}}</strong></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-9">
+                    <div class=" full-width">
+                      <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6"
+                             *ngFor="let item of internation | paginate: { itemsPerPage: 8, currentPage: page }">
+                          <div class="sa-causes-single sa-causes-single-2">
+                            <div class="entry-thumb">
+                              <img [src]="item.image" [alt]="item.name" class="img-fluid full-width">
+                              <!-- <div class="dontaion-category story-meta">
+                                <p><strong>{{item.name}}</strong></p>
+                                <p><strong>{{item.raised }}</strong></p>
+                              </div> -->
+                            </div>
+                            <div class="causes-details-wrap">
+                              <div class="causes-details">
+                                <h5><a routerLink="/project/{{item.id}}">{{item.title}}</a></h5>
+                                <p>{{item.shortdesc | slice:0:100}}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </li>
+          </ul>
+          <div [ngbNavOutlet]="nav"></div>
 
+
+        </div>
+      </div>
+    </div>
+  </section>
+</ng-container>
 

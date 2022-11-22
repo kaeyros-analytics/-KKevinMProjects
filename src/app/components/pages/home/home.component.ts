@@ -22,7 +22,7 @@ export class HomeComponent extends ShopService implements OnInit {
     {
       id: 1,
       title: 'cohedo',
-      links: 'http://cohedo.kaeyros-analytics.com/',
+      links: 'https://cohedo.de/',
 
       image: [
         '/assets/img/partners/partner-2.jpg',
