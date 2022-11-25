@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { breadcrumbsComponent } from './breadcrumbs.component';
+import { ProInterComponent } from './pro-inter.component';
 
-describe('breadcrumbsComponent', () => {
-  let component: breadcrumbsComponent;
-  let fixture: ComponentFixture<breadcrumbsComponent>;
+describe('ProInterComponent', () => {
+  let component: ProInterComponent;
+  let fixture: ComponentFixture<ProInterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ breadcrumbsComponent ]
+      declarations: [ ProInterComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(breadcrumbsComponent);
+    fixture = TestBed.createComponent(ProInterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

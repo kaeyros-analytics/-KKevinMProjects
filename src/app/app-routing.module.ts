@@ -29,7 +29,7 @@ const routes: Routes = [
   {
     path: 'about',
     loadChildren: () => import('./components/pages/about/about.module').then(m => m.AboutModule),
-    data: {breadcrumb: 'Uber uns'}
+    data: {breadcrumb: 'Über uns'}
   },
   // spenden
   {
@@ -201,6 +201,11 @@ const routes: Routes = [
   {
     path: 'project',
     loadChildren: () => import('./components/pages/story-grid/story-grid.module').then(m => m.StoryGridModule),
+    data: {breadcrumb: 'Projekte'}
+  },
+  {
+    path: 'project/international',
+    loadChildren: () => import('./components/pages/pro-inter/pro-inter.module').then(m => m.ProInterModule),
     data: {breadcrumb: 'Projekte'}
   },
   {
