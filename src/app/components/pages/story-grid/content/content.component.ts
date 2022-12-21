@@ -11,33 +11,71 @@ export class ContentComponent extends StoryHelperService {
 
   @Input() type =  '';
   isInternational = false;
+  isCalendar : boolean = false
+  year! : number
 
-  years = [
+  years1 = [
     {
-
       id: 0,
       year: 'all'
     },
     {
 
       id: 1,
-      year: 2019
-    },
-    {
-      id: 2,
       year: 2018
     },
     {
-      id: 3,
-      year: 2017
+      id: 2,
+      year: 2019
     },
     {
-      id: 4,
-      year: 2016
-    }
+      id: 3,
+      year: 2020
+    },
   ];
+  years2 =[
+    {
+      id: 4,
+      year: 2021
+    },
+    {
+      id: 5,
+      year: 2022
+    },
+    {
+      id: 6,
+      year: 2023
+    },
+    {
+      id: 7,
+      year: 2024
+    },
+   
+   
+  ];
+  years3 =[
+    {
+      id: 8,
+      year: 2025
+    },
+    {
+      id: 9,
+      year: 2026
+    },
+    {
+      id: 10,
+      year: 2027
+    },
+    {
+      id: 11,
+      year: 2028
+    },
+   
+   
+  ]
 
   filterByYear(year: any): void {
+    
     if (year === 'all') {
       this.storyblock =  storyblock;
     } else {
@@ -51,5 +89,14 @@ export class ContentComponent extends StoryHelperService {
     if (this.type === 'international') {
       this.isInternational = true;
     }
+  }
+
+  displayCalendar(){
+    this.isCalendar = !this.isCalendar
+  }
+
+  clickYear(yearSelect:number){
+    this.year= yearSelect
+
   }
 }
