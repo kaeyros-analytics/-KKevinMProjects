@@ -8,19 +8,81 @@
               <a ngbNavLink>Laufende Projekte </a>
               <ng-template ngbNavContent>
                 <div class="row">
-                  <div class="col-md-3">
+                 <div class="col-md-3">
                     <div class="main-box padding-20 trending-blog-cat mb-xl-20">
-                      <h5 class="text-light-black">Nach Jahr filtern</h5>
-                      <ul>
+                      <h5 class="text-light-black">Nach Jahr filtern <button style="color: #66414d;"(click)="displayCalendar()"><i class="fa fa-calendar" aria-hidden="true"></i></button></h5>
+                     <!--  <select id="inputState" class="form-control">
+                        <option *ngFor="let item of years" class="pb-xl-20 u-line mb-xl-20 text-center"
+                          style="cursor: pointer" (click)="filterByYear(item.year)">
+
+                          <a class="text-light-black fw-600 "><strong>{{item.year}}</strong></a>
+                        </option>
+                      </select> -->
+                      <div *ngIf="isCalendar" class="calendar">
+                        <div class="month">      
+                          <ul>
+                            <li class="prev">&#10094;</li>
+                            <li class="next">&#10095;</li>
+                            <li>
+                              2018-2028
+                            </li>
+                          </ul>
+                        </div>
+                        <table class="table table-dark" >
+                         
+                          <tbody>
+                            <tr>
+                              <td *ngFor="let item of years1"
+                              class=" pb-xl-20 u-line mb-xl-20 text-center"
+                              style="cursor: pointer"
+                              (click)="filterByYear(item.year)"><strong>{{item.year}}</strong></td>
+                             <!--  <td><span [ngClass]="{'active': year === 2016}" (click)="clickYear(2016)">2016</span></td>
+                              <td><span [ngClass]="{'active': year === 2017}" (click)="clickYear(2017)">2017</span></td>
+                              <td><span [ngClass]="{'active': year === 2018}" (click)="clickYear(2018)">2018</span></td> -->
+                            </tr>
+
+                            <tr>
+                              <td *ngFor="let item of years2"
+                              class="pb-xl-20 u-line mb-xl-20 text-center"
+                              style="cursor: pointer"
+                              (click)="filterByYear(item.year)"><strong>{{item.year}}</strong></td>
+                             
+                            </tr>
+                            <tr>
+                              <td *ngFor="let item of years3"
+                              class="pb-xl-20 u-line mb-xl-20 text-center"
+                              style="cursor: pointer"
+                              (click)="filterByYear(item.year)"><strong>{{item.year}}</strong></td>
+                             
+                            </tr>
+                          <!--   <tr>
+                              <td><span [ngClass]="{'active': year === 2019}" (click)="clickYear(2019)">2019</span></td>
+                              <td><span [ngClass]="{'active': year === 2020}" (click)="clickYear(2020)">2020</span></td>
+                              <td><span [ngClass]="{'active': year === 2021}" (click)="clickYear(2021)">2021</span></td>
+                              <td><span [ngClass]="{'active': year === 2022}" (click)="clickYear(2022)">2022</span></td>
+                            </tr>
+                            <tr>
+                              <td><span [ngClass]="{'active': year === 2023}" (click)="clickYear(2023)">2023</span></td>
+                              <td><span [ngClass]="{'active': year === 2024}" (click)="clickYear(2024)">2024</span></td>
+                              <td><span [ngClass]="{'active': year === 2025}" (click)="clickYear(2025)">2025</span></td>
+                              <td><span [ngClass]="{'active': year === 2026}" (click)="clickYear(2026)">2026</span></td>
+                            </tr> -->
+                            
+                          </tbody>
+                        </table>
+                      </div>
+                    
+                      <!--  <ul>
                         <li *ngFor="let item of years"
                             class="pb-xl-20 u-line mb-xl-20 text-center"
                             style="cursor: pointer"
                             (click)="filterByYear(item.year)">
                           <a class="text-light-black fw-600 "><strong>{{item.year}}</strong></a>
                         </li>
-                      </ul>
+                      </ul> -->
                     </div>
                   </div>
+
                   <div class="col-md-9">
                     <div class=" full-width">
                       <div class="row">
@@ -54,15 +116,68 @@
                 <div class="row">
                   <div class="col-md-3">
                     <div class="main-box padding-20 trending-blog-cat mb-xl-20">
-                      <h5 class="text-light-black">Nach Jahr filtern</h5>
-                      <ul>
+                      <h5 class="text-light-black">Nach Jahr filtern <button style="color: #66414d;" (click)="displayCalendar()"><i class="fa fa-calendar" aria-hidden="true"></i></button></h5>
+                      <div *ngIf="isCalendar" class="calendar">
+                        <div class="month">      
+                          <ul>
+                            <li class="prev">&#10094;</li>
+                            <li class="next">&#10095;</li>
+                            <li>
+                              2018-2028
+                            </li>
+                          </ul>
+                        </div>
+                        <table class="table table-dark" >
+                         
+                          <tbody>
+                            <tr>
+                              <td *ngFor="let item of years1"
+                              class=" pb-xl-20 u-line mb-xl-20 text-center"
+                              style="cursor: pointer"
+                              (click)="filterByYear(item.year)"><strong>{{item.year}}</strong></td>
+                             <!--  <td><span [ngClass]="{'active': year === 2016}" (click)="clickYear(2016)">2016</span></td>
+                              <td><span [ngClass]="{'active': year === 2017}" (click)="clickYear(2017)">2017</span></td>
+                              <td><span [ngClass]="{'active': year === 2018}" (click)="clickYear(2018)">2018</span></td> -->
+                            </tr>
+
+                            <tr>
+                              <td *ngFor="let item of years2"
+                              class="pb-xl-20 u-line mb-xl-20 text-center"
+                              style="cursor: pointer"
+                              (click)="filterByYear(item.year)"><strong>{{item.year}}</strong></td>
+                             
+                            </tr>
+                            <tr>
+                              <td *ngFor="let item of years3"
+                              class="pb-xl-20 u-line mb-xl-20 text-center"
+                              style="cursor: pointer"
+                              (click)="filterByYear(item.year)"><strong>{{item.year}}</strong></td>
+                             
+                            </tr>
+                          <!--   <tr>
+                              <td><span [ngClass]="{'active': year === 2019}" (click)="clickYear(2019)">2019</span></td>
+                              <td><span [ngClass]="{'active': year === 2020}" (click)="clickYear(2020)">2020</span></td>
+                              <td><span [ngClass]="{'active': year === 2021}" (click)="clickYear(2021)">2021</span></td>
+                              <td><span [ngClass]="{'active': year === 2022}" (click)="clickYear(2022)">2022</span></td>
+                            </tr>
+                            <tr>
+                              <td><span [ngClass]="{'active': year === 2023}" (click)="clickYear(2023)">2023</span></td>
+                              <td><span [ngClass]="{'active': year === 2024}" (click)="clickYear(2024)">2024</span></td>
+                              <td><span [ngClass]="{'active': year === 2025}" (click)="clickYear(2025)">2025</span></td>
+                              <td><span [ngClass]="{'active': year === 2026}" (click)="clickYear(2026)">2026</span></td>
+                            </tr> -->
+                            
+                          </tbody>
+                        </table>
+                      </div>
+                     <!--  <ul>
                         <li *ngFor="let item of years"
                             class="pb-xl-20 u-line mb-xl-20 text-center"
                             style="cursor: pointer"
                             (click)="filterByYear(item.year)">
                           <a class="text-light-black fw-600 "><strong>{{item.year}}</strong></a>
                         </li>
-                      </ul>
+                      </ul> -->
                     </div>
                   </div>
                   <div class="col-md-9">
@@ -101,6 +216,9 @@
     </div>
   </section>
 </ng-container>
+
+
+
 <ng-container *ngIf="isInternational">
   <section class="our-articles bg-light-theme section-padding ">
     <div class="container-fluid custom-container">
@@ -113,15 +231,50 @@
                 <div class="row">
                   <div class="col-md-3">
                     <div class="main-box padding-20 trending-blog-cat mb-xl-20">
-                      <h5 class="text-light-black">Nach Jahr filtern</h5>
-                      <ul>
+                      <h5 class="text-light-black">Nach Jahr filtern <button (click)="displayCalendar()"><i class="fa fa-calendar" aria-hidden="true"></i></button></h5>
+                      <div *ngIf="isCalendar">
+                        <div class="month">      
+                          <ul>
+                            <li class="prev">&#10094;</li>
+                            <li class="next">&#10095;</li>
+                            <li>
+                              2015-2026
+                            </li>
+                          </ul>
+                        </div>
+                        <table class="table table-dark">
+                         
+                          <tbody>
+                            <tr>
+                              <td><span [ngClass]="{'active': year === 2015}" (click)="clickYear(2015)">2015</span></td>
+                              <td><span [ngClass]="{'active': year === 2016}" (click)="clickYear(2016)">2016</span></td>
+                              <td><span [ngClass]="{'active': year === 2017}" (click)="clickYear(2017)">2017</span></td>
+                              <td><span [ngClass]="{'active': year === 2018}" (click)="clickYear(2018)">2018</span></td>
+                            </tr>
+                            <tr>
+                              <td><span [ngClass]="{'active': year === 2019}" (click)="clickYear(2019)">2019</span></td>
+                              <td><span [ngClass]="{'active': year === 2020}" (click)="clickYear(2020)">2020</span></td>
+                              <td><span [ngClass]="{'active': year === 2021}" (click)="clickYear(2021)">2021</span></td>
+                              <td><span [ngClass]="{'active': year === 2022}" (click)="clickYear(2022)">2022</span></td>
+                            </tr>
+                            <tr>
+                              <td><span [ngClass]="{'active': year === 2023}" (click)="clickYear(2023)">2023</span></td>
+                              <td><span [ngClass]="{'active': year === 2024}" (click)="clickYear(2024)">2024</span></td>
+                              <td><span [ngClass]="{'active': year === 2025}" (click)="clickYear(2025)">2025</span></td>
+                              <td><span [ngClass]="{'active': year === 2026}" (click)="clickYear(2026)">2026</span></td>
+                            </tr>
+                            
+                          </tbody>
+                        </table>
+                      </div>
+                     <!--  <ul>
                         <li *ngFor="let item of years"
                             class="pb-xl-20 u-line mb-xl-20 text-center"
                             style="cursor: pointer"
                             (click)="filterByYear(item.year)">
                           <a class="text-light-black fw-600 "><strong>{{item.year}}</strong></a>
                         </li>
-                      </ul>
+                      </ul> -->
                     </div>
                   </div>
                   <div class="col-md-9">
@@ -132,10 +285,10 @@
                           <div class="sa-causes-single sa-causes-single-2">
                             <div class="entry-thumb">
                               <img [src]="item.image" [alt]="item.name" class="img-fluid full-width">
-                              <div class="dontaion-category story-meta">
+                              <!-- <div class="dontaion-category story-meta">
                                 <p><strong>{{item.name}}</strong></p>
                                 <p><strong>{{item.raised }}</strong></p>
-                              </div>
+                              </div> -->
                             </div>
                             <div class="causes-details-wrap">
                               <div class="causes-details">
@@ -157,15 +310,50 @@
                 <div class="row">
                   <div class="col-md-3">
                     <div class="main-box padding-20 trending-blog-cat mb-xl-20">
-                      <h5 class="text-light-black">Nach Jahr filtern</h5>
-                      <ul>
+                      <h5 class="text-light-black">Nach Jahr filtern <button (click)="displayCalendar()"><i class="fa fa-calendar" aria-hidden="true"></i></button></h5>
+                      <div *ngIf="isCalendar">
+                        <div class="month">      
+                          <ul>
+                            <li class="prev">&#10094;</li>
+                            <li class="next">&#10095;</li>
+                            <li>
+                              2015-2026
+                            </li>
+                          </ul>
+                        </div>
+                        <table class="table table-dark">
+                         
+                          <tbody>
+                            <tr>
+                              <td><span [ngClass]="{'active': year === 2015}" (click)="clickYear(2015)">2015</span></td>
+                              <td><span [ngClass]="{'active': year === 2016}" (click)="clickYear(2016)">2016</span></td>
+                              <td><span [ngClass]="{'active': year === 2017}" (click)="clickYear(2017)">2017</span></td>
+                              <td><span [ngClass]="{'active': year === 2018}" (click)="clickYear(2018)">2018</span></td>
+                            </tr>
+                            <tr>
+                              <td><span [ngClass]="{'active': year === 2019}" (click)="clickYear(2019)">2019</span></td>
+                              <td><span [ngClass]="{'active': year === 2020}" (click)="clickYear(2020)">2020</span></td>
+                              <td><span [ngClass]="{'active': year === 2021}" (click)="clickYear(2021)">2021</span></td>
+                              <td><span [ngClass]="{'active': year === 2022}" (click)="clickYear(2022)">2022</span></td>
+                            </tr>
+                            <tr>
+                              <td><span [ngClass]="{'active': year === 2023}" (click)="clickYear(2023)">2023</span></td>
+                              <td><span [ngClass]="{'active': year === 2024}" (click)="clickYear(2024)">2024</span></td>
+                              <td><span [ngClass]="{'active': year === 2025}" (click)="clickYear(2025)">2025</span></td>
+                              <td><span [ngClass]="{'active': year === 2026}" (click)="clickYear(2026)">2026</span></td>
+                            </tr>
+                            
+                          </tbody>
+                        </table>
+                      </div>
+                     <!--  <ul>
                         <li *ngFor="let item of years"
                             class="pb-xl-20 u-line mb-xl-20 text-center"
                             style="cursor: pointer"
                             (click)="filterByYear(item.year)">
                           <a class="text-light-black fw-600 "><strong>{{item.year}}</strong></a>
                         </li>
-                      </ul>
+                      </ul> -->
                     </div>
                   </div>
                   <div class="col-md-9">
@@ -176,10 +364,10 @@
                           <div class="sa-causes-single sa-causes-single-2">
                             <div class="entry-thumb">
                               <img [src]="item.image" [alt]="item.name" class="img-fluid full-width">
-                              <div class="dontaion-category story-meta">
+                              <!-- <div class="dontaion-category story-meta">
                                 <p><strong>{{item.name}}</strong></p>
                                 <p><strong>{{item.raised }}</strong></p>
-                              </div>
+                              </div> -->
                             </div>
                             <div class="causes-details-wrap">
                               <div class="causes-details">

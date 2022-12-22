@@ -34,31 +34,24 @@ th, td {
 }
 
  td .active {
-  cursor: pointer;
   padding: 5px;
   background: #1abc9c;
   color: white !important
  }
 
+
 .nav-item{
-  width: 35%;
-  text-align: center;
-  font-weight: bold;
-
-}
-.nav{
-  justify-content: space-around;
-  margin-top: -55px;
-}
-
-.nav-link.active{
-  background-color: #4c283c;
-}
-.ui-datepicker-calendar {
-  display: none;
-  }
-
-  .datepicker-only-month-select {
-    border: 0 !important;
+    width: 35%;
+    text-align: center;
+    font-weight: bold;
   
   }
+  .nav{
+    justify-content: space-around;
+    margin-top: -55px;
+  }
+  
+  .nav-link.active{
+    background-color: #4c283c;
+  }
+  

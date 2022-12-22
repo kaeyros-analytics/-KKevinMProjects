@@ -4,7 +4,7 @@ import { StoryGridComponent } from './story-grid.component';
 
 const routes: Routes = [
   { path: '', component: StoryGridComponent },
-  { path: 'international', component: StoryGridComponent, data: {type: 'international'} }
+  /* { path: 'international', component: StoryGridComponent, data: {type: 'international'} } */
 ];
 
 @NgModule({

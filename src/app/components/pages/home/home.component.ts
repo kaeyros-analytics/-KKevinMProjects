@@ -22,7 +22,7 @@ export class HomeComponent extends ShopService implements OnInit {
     {
       id: 1,
       title: 'cohedo',
-      links: 'https://www.kreis-steinfurt.de/kv_steinfurt/Kreisverwaltung/%C3%84mter/Kommunales%20Integrationszentrum/',
+      links: 'https://cohedo.de/',
 
       image: [
         '/assets/img/partners/partner-2.jpg',
@@ -30,7 +30,7 @@ export class HomeComponent extends ShopService implements OnInit {
     },
     {
       id: 2,
-      links: 'https://cohedo.de/',
+      links: 'https://www.dortmund.de/de/leben_in_dortmund/familie_und_soziales/jugendamt/start_jugendamt/index.html',
       title: 'stadt dortmund',
       image: [
         '/assets/img/partners/partner-3.jpg',

@@ -105,7 +105,7 @@ label {
 	opacity: 0.8;
 }
 .overlay-bg-dark {
-	background: #000000;
+	/* background: #000000; */
 	opacity: 0.5;
 	z-index: 2;
 }
@@ -5465,7 +5465,7 @@ footer .footer-links .contact-info li a span {
 /* Advertisement-Banner 1 */
 
 .promo-se-icons .icon-box {
-	max-width: 191px;
+	max-width: 213px;
 	position: relative;
 }
 .promo-se-icons .icon-box img {

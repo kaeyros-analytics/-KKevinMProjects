@@ -75,7 +75,6 @@ export class ContentComponent extends StoryHelperService {
   ]
 
   filterByYear(year: any): void {
-    
     if (year === 'all') {
       this.storyblock =  storyblock;
     } else {
