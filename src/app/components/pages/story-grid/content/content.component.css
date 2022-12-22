@@ -1,3 +1,45 @@
+.month {
+  padding: 10px 15px;
+/*   width: 100%; */
+  background: #66414d;
+  text-align: center;
+  color: white;
+}
+.calendar{
+  background-color: #4c283c !important;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 1px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 1px;
+}
+
+
+
+table {
+  border-collapse: collapse;
+ 
+ 
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+ 
+}
+
+ td .active {
+  cursor: pointer;
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+ }
+
 .nav-item{
   width: 35%;
   text-align: center;
@@ -12,3 +54,11 @@
 .nav-link.active{
   background-color: #4c283c;
 }
+.ui-datepicker-calendar {
+  display: none;
+  }
+
+  .datepicker-only-month-select {
+    border: 0 !important;
+  
+  }
