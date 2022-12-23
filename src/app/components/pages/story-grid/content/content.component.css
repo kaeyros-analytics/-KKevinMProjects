@@ -34,9 +34,9 @@ th, td {
 }
 
  td .active {
-  cursor: pointer;
+  cursor: pointer !important;
   padding: 5px;
-  background: #1abc9c;
+  background: #66414d;
   color: white !important
  }
 
