@@ -29,12 +29,13 @@ export class ContentComponent extends StoryHelperService {
       id: 2,
       year: 2019
     },
+    {
+      id: 3,
+      year: 2020
+    },
    
   ];
-  years2 =[ {
-    id: 3,
-    year: 2020
-  },
+  years2 =[ 
 
     {
       id: 4,
@@ -43,6 +44,10 @@ export class ContentComponent extends StoryHelperService {
     {
       id: 5,
       year: 2022
+    },
+    {
+      id: 6,
+      year: 2023
     },
    
    
