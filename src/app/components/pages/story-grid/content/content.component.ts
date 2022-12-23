@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import { id } from 'date-fns/locale';
 import {StoryHelperService} from 'src/app/components/services/story-helper.service';
 import storyblock from '../../../data/story/story.json';
 
@@ -11,8 +12,8 @@ export class ContentComponent extends StoryHelperService {
 
   @Input() type =  '';
   isInternational = false;
-  isCalendar : boolean = false
-  year! : number
+  isCalendar : boolean = false;
+   year! : any ;
 
   years1 = [
     {
@@ -28,12 +29,13 @@ export class ContentComponent extends StoryHelperService {
       id: 2,
       year: 2019
     },
-    {
-      id: 3,
-      year: 2020
-    },
+   
   ];
-  years2 =[
+  years2 =[ {
+    id: 3,
+    year: 2020
+  },
+
     {
       id: 4,
       year: 2021
@@ -42,18 +44,20 @@ export class ContentComponent extends StoryHelperService {
       id: 5,
       year: 2022
     },
-    {
-      id: 6,
-      year: 2023
-    },
-    {
-      id: 7,
-      year: 2024
-    },
+   
    
    
   ];
-  years3 =[
+ /*  years3 =[
+   {
+      id: 6,
+      year: 2023
+    },
+   
+   {
+      id: 7,
+      year: 2024
+    },
     {
       id: 8,
       year: 2025
@@ -72,15 +76,21 @@ export class ContentComponent extends StoryHelperService {
     },
    
    
-  ]
+  ] */
 
   filterByYear(year: any): void {
-    
+   /*  this.year = year;
+    this.storyblock =  storyblock;
+    this.filterProject(year); */
     if (year === 'all') {
+      this.year = year
+     
+        
       this.storyblock =  storyblock;
     } else {
+      this.year = year;
       this.filterProject(year);
-    }
+    } 
 
   }
 
